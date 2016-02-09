@@ -751,6 +751,9 @@ if($mybb->input['action'] == "newreply" || $mybb->input['action'] == "editdraft"
 		// Quoting more than one post - fetch them
 		if(count($quoted_posts) > 0)
 		{
+			// Creating space above the quoted posts to be able to write there:
+			$message = "\n\n\n";
+			
 			$external_quotes = 0;
 			$quoted_posts = implode(",", $quoted_posts);
 			$unviewable_forums = get_unviewable_forums();
